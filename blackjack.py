@@ -1,8 +1,15 @@
-##edit code to allow for accurate blackjack step where dealer deals own card until soft 17
-##make sure the if end_of_game conditional is specific enough
-##overall good job
-
 import random
+
+logo = """
+.------.            _     _            _    _            _    
+|A_  _ |.          | |   | |          | |  (_)          | |   
+|( \/ ).-----.     | |__ | | __ _  ___| | ___  __ _  ___| | __
+| \  /|K /\  |     | '_ \| |/ _` |/ __| |/ / |/ _` |/ __| |/ /
+|  \/ | /  \ |     | |_) | | (_| | (__|   <| | (_| | (__|   < 
+`-----| \  / |     |_.__/|_|\__,_|\___|_|\_\ |\__,_|\___|_|\_\\
+      |  \/ K|                            _/ |                
+      `------'                           |__/           
+"""
 
 def check_for_ace():
     for card in user_hand:
@@ -35,7 +42,9 @@ def check_for_ace():
 def show_score():
     print(f'\nYour hand: {user_hand}, your score: {user_score}\n')
     print(f'\nDealer\'s hand: {dealer_hand}, dealer\'s score: {dealer_score}\n')
-    
+
+print(logo)
+
 end_of_game = False
 cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 user_hand = []
